@@ -25,3 +25,10 @@ body{
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.title{
+  @include fontz(36px, #000, 52px);
+  text-align: center;
+  @extend %DMSans-700;
+  margin-bottom: 30px;
+}
