@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header__inner{
@@ -167,5 +168,115 @@
     @include fontz(14px, #7b7b7b, 1);
   }
 }
+
+.slider{
+  margin-bottom: 60px;
+  &__inner{
+    background-color: #fcd7b6;
+  }
+  &__item{
+    display: flex !important;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  &__content{
+    margin-top: 120px;
+    padding-left: 280px;
+  }
+  &__img{
+    padding-right: 180px;
+  }
+  &__title{
+    @include fontz(72px, #243f4d, 70px);
+    @extend %rubik-500;
+    margin-bottom: 30px;
+  }
+  &__text{
+    @include fontz(18px, #436372, 30px);
+    max-width: 370px;
+    margin-bottom: 30px;
+    @extend %rubik-400;
+  }
+  &__link{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    background-color: #a3bbc8;
+    span{
+      @include fontz(15px, #fff, 12px);
+    }
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 45px;
+    li{
+      padding: 0 10px;
+      button{
+        @include fontz(10px, #243f4d, 8px);
+        @extend %rubik-500;
+        border: none;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        background-color: #fde3cc;
+        cursor: pointer;
+      }
+      &.slick-active{
+        button{
+        background-color: #fff;
+        }
+      }
+    }
+  }
+  .info{
+    &__items{
+      display: flex;
+      justify-content: space-between;
+      background-color: #fef7f0;
+    }
+    &__item{
+      width: 570px;
+      padding: 45px 150px;
+      position: relative;
+      &:not(:last-child){
+        border-right: 1px solid #e8e4df;
+      } 
+    }
+    &__item-support{
+      padding-left: 220px;
+    }
+    &__item-support::before{
+      @extend %info-img;
+      background-image: url('../images/slider/info/support.svg');
+      left: 140px; 
+    }
+    &__item-payment::before{
+      @extend %info-img;
+      background-image: url('../images/slider/info/payment.svg');
+      left: 70px;  
+    }
+    &__item-delivery::before{
+      @extend %info-img;
+      background-image: url('../images/slider/info/delivery.svg');
+      left: 75px;
+    }
+    &__item-title{
+      @include fontz(18px, #414141, 26px);
+      margin-bottom: 10px;
+      @extend %DMSans-700;
+    }
+    &__item-text{
+      span{
+        display: block;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
 
 @import 'media';

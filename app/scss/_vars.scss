@@ -6,6 +6,15 @@ $footer-clr: #7b7b7b;
   line-height: $lh;
 }
 
+%info-img{
+  content: '';
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-repeat: no-repeat;
+  top: 50px;
+}
+
 %rubik-400{
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
