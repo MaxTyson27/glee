@@ -6,6 +6,20 @@ $footer-clr: #7b7b7b;
   line-height: $lh;
 }
 
+%btn{
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  @include fontz(16px, #8b8b8b, 1);
+  @extend %DMSans-700;
+  cursor: pointer;
+}
+
+%buttons{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
 
 
 %info-img{

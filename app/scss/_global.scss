@@ -20,7 +20,7 @@ body{
   margin: 0 auto;
 }
 
-.cotainer-header{
+.container-header{
   max-width: 1800px;
   padding: 0 15px;
   margin: 0 auto;
@@ -31,4 +31,12 @@ body{
   text-align: center;
   @extend %DMSans-700;
   margin-bottom: 30px;
+}
+
+.buttons{
+  @extend %buttons;
+}
+
+.btn{
+  @extend %btn;
 }
