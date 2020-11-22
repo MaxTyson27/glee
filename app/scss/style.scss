@@ -330,9 +330,14 @@
     font-size: 0;
     line-height: 0;
     cursor: pointer;
-  }
-  &__item-btn-cart{
-    background-color: #a3bbc8;
+    &:hover{
+      background-color: #a3bbc8;
+      svg{
+        path{
+          fill: #fff;
+        }
+      }
+    }
   }
 }
 .product-btn{
@@ -428,7 +433,7 @@
     grid-gap: 30px;
   }
   &__item{
-    display: block;
+    display: block; 
     background-repeat: no-repeat;
     min-height: 245px;
     max-width: 370px;
@@ -445,6 +450,18 @@
   }
   &__style{
     @include fontz(16px, #a3bbc8, 1);
+  }
+}
+
+.popup{
+  margin-bottom: 120px;
+  &__item{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
