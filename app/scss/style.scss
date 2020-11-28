@@ -12,6 +12,7 @@
 }
 
 .menu{
+  margin-left: 150px;
   &__list{
     display: flex;
   }
@@ -559,6 +560,104 @@
     padding-bottom: 90px;
   }
 }
+
+.parnters__login-page{
+  padding-top: 75px;
+}
+
+.top{
+  background-color: #edf1f4;
+  padding: 25px 0 30px;
+  margin-bottom: 110px;
+  &__inner{
+
+  }
+  &__title{
+    text-align: center;
+    @include fontz(36px, #222933, 1);
+    margin-bottom: 10px;
+  }
+}
+
+.login{
+  padding-bottom: 115px;
+  &__inner{
+    margin: 0 auto;
+    max-width: 470px;
+  }
+  &__form{
+
+  }
+  &__label{
+    @include fontz(14px, #436372, 1);
+    display: block;
+    margin-bottom: 30px;
+  } 
+  &__input{
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #f6f6f6;
+    padding: 0 15px;
+    margin-top: 12px;
+  }
+  &__btn{
+    width: 100%;
+    background-color: #a3bbc8;
+    @include fontz(18px, #fff, 1);
+    padding: 20px 0;
+    border: none;
+    cursor: pointer;
+    @extend %rubik-500;
+    margin-bottom: 30px;
+  }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f6f6f6;
+    margin-bottom: 30px;
+  }
+  &__error{
+    @include fontz(14px, #436372, 1);
+  }
+  &__register{
+    @include fontz(14px, #436372, 1);
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__link{
+    display: block;
+    border: 2px solid #a3bbc8;
+    padding: 20px 0;
+    text-align: center;
+    @include fontz(18px, #243f4d, 1);
+    @extend %rubik-500;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @import 'media';
