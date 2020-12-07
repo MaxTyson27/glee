@@ -983,6 +983,21 @@
       margin-right: 15px;
     }
   }
+  &__link-next{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #a3bbc8;
+    transition: all .3s;
+    text-align: center;
+    padding-top: 16px;
+    @include fontz(16px, #243f4d, 1);
+    width: 75px;
+    &:hover{
+      background-color: #a3bbc8;
+      color: #fff;
+    }
+  }
   &__link{
     display: block;
     width: 50px;
@@ -996,9 +1011,10 @@
       background-color: #a3bbc8;
       color: #fff;
     }
-  }
-  &__item-arrow{
-    width: 75px;
+    &.pagination__link--active{
+      background-color: #a3bbc8;
+      color: #fff;
+    }
   }
 }
 
@@ -1244,6 +1260,149 @@
   right: 70px;
 }
 
+.blog{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    max-width: 830px;
+  }
+  &__content-item{
+    margin-bottom: 50px;
+    &:last-child{
+      margin-bottom: 75px;
+    }
+  }
+  &__filters{
+    width: 270px;
+  }
+  &__content-info{
+    height: 70px;
+    width: 275px;
+    background-color: $accent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateY(-70px);
+    span{
+      font-size: 12px;
+      color: #fff;
+      position: relative;
+      padding-left: 20px;
+    }
+  }
+  &__content-author::after{
+    background-image: url('../images/icon/user-regular.svg');
+    background-repeat: no-repeat;
+    left: -2px;
+    top: -3px;
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+  }
+  &__content-date::after{
+    background-image: url('../images/icon/calendar-alt-regular-white.svg');
+    background-repeat: no-repeat;
+    left: -2px;
+    top: -3px;
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+  }
+  &__content-title{
+    margin-top: -40px;
+    @include fontz(36px, #333333, 1);
+    @extend %rubik-400;
+    margin-bottom: 35px;
+  }
+  &__content-text{
+    @include fontz(16px, $text, 30px);
+    margin-bottom: 35px;
+  }
+  &__content-link{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 180px;
+    height: 60px;
+    border: 1px solid $accent;
+    span:first-child{
+      color: $accent;
+    }
+  }
+}
+
+.filter-input{
+  display: flex;
+  margin-bottom: 50px;
+  &__item{
+    width: 220px;
+    height: 40px;
+    border: 2px solid #ebf1f3;
+    border-radius: 5px;
+    padding: 0 10px;
+    outline: transparent;
+    font-size: 16px;
+    color: #243f4d;
+  }
+  &__btn{
+    border: 2px solid #ebf1f3;
+    background-color: #ebf1f3;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transform: translateX(-5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: transparent;
+  }
+}
+
+.recent-posts{
+  &__item{
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__img{
+    
+  }
+  &__content{
+    margin-left: 20px;
+  }
+  &__content-date{
+    font-size: 12px;
+    color: #9a9a9a;
+    padding-left: 20px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url('../images/icon/calendar-alt-regular.svg');
+      background-repeat: no-repeat;
+      width: 18px;
+      height: 18px;
+      top: -3px;
+      left: -1px;
+    }
+  }
+  &__content-title{
+    @include fontz(14px, #333333, 20px);
+    margin-bottom: 8px;
+  }
+}
+
+.pagination-page{
+  margin-bottom: 120px;
+  &__list{
+    display: flex;
+    justify-content: start;
+  }
+}
 
 
 

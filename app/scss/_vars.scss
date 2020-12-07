@@ -1,5 +1,7 @@
 $footer-clr: #7b7b7b;
 $accent: #a3bbc8;
+$default: #333333;
+$text: #243f4d;
 
 @mixin fontz($fz, $c, $lh){
   font-size: $fz;
