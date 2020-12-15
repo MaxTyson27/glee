@@ -1596,8 +1596,228 @@
   }
 }
 
+.blog-one{
+  &__content-text{
+    margin-bottom: 55px;
+    h3{
+      font-size: 36px;
+      color: $default;
+      margin-bottom: 20px;
+      @extend %rubik-400;
+    }
+    p{
+      @include fontz(16px, $text, 30px);
+      margin-bottom: 20px;
+    }
+    blockquote{
+      @include fontz(16px, $text, 30px);
+      background-color: #edf1f4;
+      padding: 20px 90px 20px 40px;
+      border-left: 7px solid $accent;
+      margin-bottom: 45px;
+      span{
+        margin-top: 10px;
+        padding-left: 42px;
+        display: block;
+        position: relative;
+      }
+      span::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 20px;
+        background-color: $accent;
+        left: 0;
+        top: 14px;
+      }
+    }
+    h4{
+      font-size: 18px;
+      color: $text;
+      padding: 25px 0;
+    }
+  }
+  &__left-img{
+    float: left;
+    margin-right: 30px;
+  }
+  &__right-img{
+    float: right;
+    margin-left: 30px;
+  }
+  &__author{
+    padding: 25px 0;
+    border-top: 2px solid #ebebeb;
+    border-bottom: 2px solid #ebebeb;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__author-about{
+    display: flex;
+    align-items: center;
+    span{
+      display: block;
+    }
+  }
+  &__author-name{
+    margin-bottom: 12px;
+    @include foncl(18px, $default);
+    @extend %rubik-500;
+  }
+  &__author-work{
+    @include foncl(16px, #666666);
+  }
+  &__author-img{
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+  &__author-info{
+    margin-right: 30px;
+    span{
+      @include foncl(16px, $default);
+    }
+    a{
+      @include foncl(16px, #999999);
+    }
+  }
+  &__author-tags{
+    margin-bottom: 10px;
+    span{
+      margin-right: 30px;
+    }
+  }
+  &__author-share{
+    span{
+      margin-right: 20px;
+    }
+    a{
+      vertical-align: sub;
+    }
+    a:not(:last-child){
+      margin-right: 20px;
+    }
+  }
+  &__form{
+    margin-bottom: 120px;
+  }
+  &__form-title{
+    @include foncl(24px, #436372);
+    @extend %rubik-700;
+    display: block;
+    margin-bottom: 40px;
+  }
+  
+  &__input-mail,
+  &__input-name{
+    height: 50px;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    font-size: 16px;
+    outline: transparent;
+    padding: 0 30px 0 20px;
+    &:focus{
+      border: 1px solid $accent;
+    }
+    margin-bottom: 20px;
+  }
 
+  &__input-mail{
+    margin-left: 20px;
+  }
+  &__textarea{
+    height: 120px;
+    max-width: 824px;
+    resize: none;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    font-size: 16px;
+    outline: transparent;
+    padding: 20px 18px;
+    margin-bottom: 40px;
+    &:focus{
+      border: 1px solid $accent;
+    }
+  }
+  &__btn{
+    font-size: 14px;
+    color: #fff;
+    background-color: $accent;
+    border: none;
+    height: 50px;
+    width: 190px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
 
+.comments{
+  &__title{
+    @include foncl(24px, #436372);
+    @extend %rubik-700;
+    margin-bottom: 50px;
+  }
+  &__item{
+    display: flex;
+    &:nth-child(2){
+      margin-left: 130px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 30px;
+    }
+    &:first-child{
+      .comments__item-content{
+        padding-bottom: 25px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+    }
+    &:last-child{
+      .comments__item-content{
+        margin-bottom: 90px;
+      }
+    }
+  }
+  &__item-img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+  &__item-content{    
+  }
+  &__item-box{
+    display: flex;
+    justify-content: space-between; 
+  }
+  &__item-name{
+    display: block;
+    @extend %rubik-700;
+    @include foncl(16px, #436372);
+    margin-bottom: 20px;
+  }
+  &__item-date{
+    @include foncl(14px, #9e9e9e);
+  }
+  &__item-text{
+    display: block;
+    @include fontz(16px, #565872, 30px);
+    margin-bottom: 20px;
+  }
+  &__item-link{
+    display: flex;
+    align-items: center;
+    span{
+      color: #516278;
+      font-size: 14px;
+      margin-right: 7px;
+    }
+  }
+}
 
 
 
