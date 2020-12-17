@@ -1819,6 +1819,124 @@
   }
 }
 
+.contact{
+  margin-bottom: 120px;
+  &__subtitle{
+    @extend %poppins-700;
+    @include foncl(16px, $accent);
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  &__title{
+    @include foncl(35px, #436372);
+    @extend %DMSans-700;
+    margin-bottom: 65px;
+    text-align: center;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 370px;
+    background-color: #fbfbfb;
+    &:hover{
+      border: 3px solid $accent;
+      .contact__item-icon{
+        background-color: $accent;
+        path{
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &__item-box{
+    margin: 0 auto 55px;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+  }
+  &__item-icon{
+    transition: all .3s;
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item-title{
+    @extend %DMSans-700;
+    @include foncl(20px, #222222);
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  &__item-adress{
+    @include fontz(16px, #565872, 30px);
+    padding-bottom: 75px;
+    text-align: center;
+  }
+  &__item-email{
+      @include fontz(16px, #565872, 30px);
+      text-align: center;
+  }
+  &__item-phone{
+    display: block;
+    @include fontz(16px, #565872, 30px);
+    text-align: center;
+  }
+}
+
+.message{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form{
+    margin-right: 50px;
+    width: 620px;
+  }
+  &__form-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  &__form-input{
+    height: 50px;
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    background-color: #fafafa;
+    border:none;
+    padding: 0 35px 0 20px;
+  }
+  &__form-textarea{
+    padding: 20px;
+    width: 100%;
+    background-color: #fafafa;
+    border:none;
+    resize: none;
+    height: 175px;
+    margin-bottom: 30px;
+  }
+  &__form-btn{
+    @extend %poppins-700;
+    @include foncl(15px, #fff);
+    border: none;
+    background-color: $accent;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+  }
+}
+#map{
+  height: 335px;
+  width: 500px;
+}
+
 
 
 
